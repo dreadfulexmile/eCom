@@ -1,6 +1,12 @@
 import Test from './test'
+import Button from './Button';
 function App() {
-  return <div> <Test></Test> </div>
+  return(
+  <>
+    <Test></Test>
+    <Button></Button>
+  </>
+  );
 }
 
 export default App
