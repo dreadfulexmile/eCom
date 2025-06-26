@@ -1,12 +1,14 @@
 import Test from './test'
 import Button from './Button';
-function App() {
+
+const App =()=>{
   return(
-  <>
-    <Test></Test>
-    <Button></Button>
-  </>
-  );
+    <>
+      <Test/>
+      <Button/>
+    </>
+    
+  )
 }
 
 export default App
