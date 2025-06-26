@@ -4,10 +4,9 @@ import Button from './Button';
 const App =()=>{
   return(
     <>
-      <Test/>
+      <h1>HelloWorld..p:</h1>
       <Button/>
-      <Button/>
-      <Button/>
+      <Test name='SK' age={18} city='CMB'/>
     </>
     
   )
