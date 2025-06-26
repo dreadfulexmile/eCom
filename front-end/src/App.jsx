@@ -6,6 +6,8 @@ const App =()=>{
     <>
       <Test/>
       <Button/>
+      <Button/>
+      <Button/>
     </>
     
   )
