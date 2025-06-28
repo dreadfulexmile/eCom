@@ -1,6 +1,6 @@
 import Test from './test'
 import Button from './Button';
-import Navigation from './Components/Navigation';
+import Navigation from './Components/Navigation/Navigation';
 
 const App =()=>{
   return(
