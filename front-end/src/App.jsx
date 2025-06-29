@@ -1,5 +1,5 @@
 import Test from './test'
-import Button from './Button';
+import {Button} from '@/Components/ui/button';
 import Navigation from './Components/Navigation/Navigation';
 
 const App =()=>{
@@ -10,6 +10,7 @@ const App =()=>{
       <Test name='SK' age={18} city='CMB'/> */}
 
       <Navigation/>
+      <Button/>
     </>
     
   )
