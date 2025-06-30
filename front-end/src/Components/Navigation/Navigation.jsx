@@ -1,11 +1,10 @@
-import Button from '@/Components/ui/button';
+import {Button} from '../ui/button';
 import s from './Navigation.module.css'
 
 function Navigation() {
     return(
         <header className={s.navbar}>
             <div className={s.logo}>Mebius</div>
-            <Button/>
             <nav>
                 <a href="">Shoes</a>
                 <a href="">T-Shirts</a>

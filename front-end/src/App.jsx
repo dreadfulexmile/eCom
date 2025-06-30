@@ -1,6 +1,9 @@
 import Test from './test'
 import {Button} from '@/Components/ui/button';
 import Navigation from './Components/Navigation/Navigation';
+import SampleButton from './SampleButton';
+import { Switch } from '@/Components/ui/switch';
+
 
 const App =()=>{
   return(
@@ -10,7 +13,12 @@ const App =()=>{
       <Test name='SK' age={18} city='CMB'/> */}
 
       <Navigation/>
-      <Button/>
+      <Button variant={"outline"}>Click Me </Button>
+      <Switch></Switch>
+
+
+      {/* <SampleButton>The Sample Button</SampleButton> */}
+
     </>
     
   )
