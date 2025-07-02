@@ -13,8 +13,8 @@ const App =()=>{
       <Test name='SK' age={18} city='CMB'/> */}
 
       <Navigation/>
-      <Button variant={"outline"}>Click Me </Button>
-      <Switch></Switch>
+      {/* <Button variant={"outline"}>Click Me </Button>
+      <Switch></Switch> */}
 
 
       {/* <SampleButton>The Sample Button</SampleButton> */}
