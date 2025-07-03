@@ -3,11 +3,11 @@ function Navigation() {
         <header className="navbar">
             <div className="logo">Mebius</div>
             <nav className='hidden md:flex space-x-8'>
-                {/* <a href="">Shoes</a>
+                <a href="">Shoes</a>
                 <a href="">T-Shirts</a>
                 <a href="">Shorts</a>
                 <a href="">Pants</a>
-                <a href="">Socks</a> */}
+                <a href="">Socks</a>
 
                 {[
                     {
