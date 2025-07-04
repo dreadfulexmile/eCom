@@ -1,13 +1,14 @@
 function Navigation() {
     return(
-        <header className="navbar">
-            <div className="logo">Mebius</div>
+        <header className="big-white border-b border-gray-200 px-4 lg:px-16">
+            
+            <div className="text-2xl font-bold ">Mebius</div>
             <nav className='hidden md:flex space-x-8'>
-                <a href="">Shoes</a>
+                {/* <a href="">Shoes</a>
                 <a href="">T-Shirts</a>
                 <a href="">Shorts</a>
                 <a href="">Pants</a>
-                <a href="">Socks</a>
+                <a href="">Socks</a> */}
 
                 {[
                     {
@@ -41,7 +42,7 @@ function Navigation() {
                 })}
             </nav>
 
-            <div className="controls">
+            <div className="flex items-center space-x-4">
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div>
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg></div>
                 <a href="">Sign in</a>
