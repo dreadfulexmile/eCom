@@ -1,54 +1,88 @@
 function Navigation() {
-    return(
-        <header className="big-white border-b border-gray-200 px-4 lg:px-16">
-            
-            <div className="text-2xl font-bold ">Mebius</div>
-            <nav className='hidden md:flex space-x-8'>
-                <a href="">Shoes</a>
-                <a href="">T-Shirts</a>
-                <a href="">Shorts</a>
-                <a href="">Pants</a>
-                <a href="">Socks</a>
+    return (
+    <header className="bg-white border-b border-gray-200 px-4 lg:px-16">
+      <div>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <a href="/" className="font-bold text-2xl">
+            Mebius
+          </a>
 
-                {[
-                    {
-                        path: "/shop/shoes",
-                        label: "Shoes",
-                    },
-                    {
-                        path: "/shop/tshirts",
-                        label: "T-Shirts",
-                    },
-                    {
-                        path: "/shop/shorts",
-                        label: "Shorts",
-                    },
-                    {
-                        path: "/shop/pants",
-                        label: "Pants",
-                    },
-                    {
-                        path: "/shop/socks",
-                        label: "Socks",
-                    },
-                ].map((item)=>{
-                    return(
-                        <a
-                        href={item.path}
-                        className='font-medium hover:text-gray-600'>
-                            {item.label}
-                        </a>
-                    );
-                })}
-            </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {[
+              {
+                path: "/shop/shoes",
+                label: "Shoes",
+              },
+              {
+                path: "/shop/tshirts",
+                label: "T-Shirt",
+              },
+              {
+                path: "/shop/shorts",
+                label: "Shorts",
+              },
+              {
+                path: "/shop/pants",
+                label: "Pants",
+              },
+              {
+                path: "/shop/socks",
+                label: "Socks",
+              },
+            ].map((item) => {
+              return (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  className="font-medium hover:text-gray-600"
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </nav>
 
-            <div className="flex items-center space-x-4">
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></div>
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg></div>
-                <a href="">Sign in</a>
-                <a href="">Sign Up</a>
+          {/* Icons */}
+          <div className="flex items-center space-x-4">
+            <button aria-label="Search" className="p-1">
+              <Search size={20} />
+            </button>
+            <a
+              href="/shop/cart"
+              aria-label="Shopping Bag"
+              className="p-1 relative"
+            >
+              <ShoppingBag size={20} />
+              <span className="absolute -top-1 -right-1 bg-black text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+                {0}
+              </span>
+            </a>
+            {/* <SignedIn>
+              <UserButton />
+            </SignedIn> */}
+            <div className="hidden md:block">
+              {/* <SignedOut> */}
+              <div className="flex items-center gap-4">
+                <a href="/sign-in">Sign In</a>
+                <a href="/sign-up">Sign Up</a>
+              </div>
+              {/* </SignedOut> */}
             </div>
-        </header>
+
+            {/* Mobile menu button */}
+            {/* <button
+              className="md:hidden p-1"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button> */}
+          </div>
+        </div>
+      </div>
+    </header>
     )
 }
 
