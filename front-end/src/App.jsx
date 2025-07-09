@@ -1,6 +1,6 @@
 import Test from './test'
 import {Button} from '@/Components/ui/button';
-import Navigation from './Components/Navigation/Navigation';
+import Navigation from './Components/Navigation';
 import SampleButton from './SampleButton';
 import { Switch } from '@/Components/ui/switch';
 
