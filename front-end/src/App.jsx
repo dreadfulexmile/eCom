@@ -1,26 +1,15 @@
-import Test from './test'
 import {Button} from '@/Components/ui/button';
 import Navigation from './Components/Navigation';
-import SampleButton from './SampleButton';
 import { Switch } from '@/Components/ui/switch';
+import HeroGrid from './Components/HeroGrid';
 
 
 const App =()=>{
   return(
     <>
-      {/* <h1>HelloWorld..p:</h1>
-      <Button/>
-      <Test name='SK' age={18} city='CMB'/> */}
-
-      <Navigation/>
-      {/* <Button variant={"outline"}>Click Me </Button>
-      <Switch></Switch> */}
-
-
-      {/* <SampleButton>The Sample Button</SampleButton> */}
-
+    <Navigation/>
+    <HeroGrid/>
     </>
-    
   )
 }
 

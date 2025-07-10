@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { Search, X, Menu, ShoppingBag } from 'lucide-react';
 
 export default function Navigation() {
+
   const[isMenuOpen,setIsMenuOpen]=useState(false);
+
   const closeMobileMenu =()=>setIsMenuOpen(false);
+
   return (
     <header className='bg-white border-b border-gray-200 px-4 lg:px-16'>
       <div>
