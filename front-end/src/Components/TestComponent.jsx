@@ -1,0 +1,20 @@
+import { useState } from "react";
+import { Button } from "./ui/button";
+
+import React from 'react'
+
+export default function TestComponent() {
+  const [numbers, setNumbers] = useState([1,2,3,4,5]);
+  const handleClick = ()=>{
+    setNumbers([...numbers,6]);
+  };
+
+  return (
+    <div className="px-4 lg:px-16 py-8 border border-black">
+        {numbers.map((number)=>{
+            <h1 key={number} className="text-2xl">{number}</h1>
+        })}
+        <Button onClick={handleClick}>ClickMe</Button>
+    </div>
+  )
+}

@@ -4,17 +4,19 @@ import { Switch } from '@/Components/ui/switch';
 import HeroGrid from './Components/HeroGrid';
 import CasualInspiration from './Components/CasualInspiration'
 import TrendingSection from './Components/TrendingSection';
+import TestComponent from './Components/TestComponent';
 
 
 const App =()=>{
   return(
     <>
     <Navigation/>
-    <main className='flex flex-col gap-8 md:gap-12 pb-8'>
+    {/* <main className='flex flex-col gap-8 md:gap-12 pb-8'> */}
       <HeroGrid/>
       <CasualInspiration/>
       <TrendingSection></TrendingSection>
-    </main>
+      <TestComponent/>
+    {/* </main> */}
     
     </>
   )
