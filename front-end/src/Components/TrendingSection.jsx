@@ -6,11 +6,11 @@ import { useState } from 'react'
 
 
 export default function TrendingSection() {
-  const [setSelectedCategoryId, setSelectedCategoryId]= useState("ALL");
+  const [selectedCategoryId, setSelectedCategoryId]= useState("ALL");
   const filteredProducts = 
-    setSelectedCategoryId === "ALL"
+    selectedCategoryId === "ALL"
         ? products
-        : products.filter((product)=> product.categoryId === setSelectedCategoryId);
+        : products.filter((product)=> product.categoryId === selectedCategoryId);
   return (
     <section className='px-4 lg:px-16 py-8'>
         <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0'>
@@ -19,7 +19,7 @@ export default function TrendingSection() {
                 {categories?.map((category)=>{
                     <CategoryButton key={category._id} category={category}
                         onClick={()=> setSelectedCategoryId(category._id)}
-                        setSelectedCategoryId={setSelectedCategoryId}/>
+                        selectedCategoryId={selectedCategoryId}/>
                 })}
             </div>
         </div>
