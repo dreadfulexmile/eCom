@@ -4,9 +4,10 @@ import { Button } from "./ui/button";
 import React from 'react'
 
 export default function TestComponent() {
-  const [numbers, setNumbers] = useState([1,2,3,4,5]);
-  const handleClick = ()=>{
-    setNumbers([...numbers,6]);
+  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
+
+  const handleClick = () => {
+    setNumbers([...numbers, 6]);
   };
 
   return (
