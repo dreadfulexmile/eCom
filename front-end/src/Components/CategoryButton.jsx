@@ -1,9 +1,15 @@
 import React from 'react'
+import {cn} from '@/lib/utils'
 
-export default function CategoryButton({category}) {
+export default function CategoryButton({category, selectedCategoryID, onClick}) {
   return (
     <button
-     className={'border rounded-full px-4 py-2 transition-colors border-black text-black hover:bg-gray-100'}>
+      onClick={onClick}
+      className={cn('border rounded-full px-4 py-2 transition-colors',{
+        "bg-black text-white": selectedCategoryID === category._id,
+        "bg-white border-black text-black":
+          selectedCategoryID !== category._id,
+      })}>
         {category.name}
      </button>
   )
