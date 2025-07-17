@@ -18,6 +18,11 @@ export default function CasualInspiration() {
              alt="Casual Inspiration Outfit"
              className='rounded-2xl absolute top-0 left-0 w-full h-full object-cover'/>
         </div>
+        <div className='relative col-span-1 md:col-span-3 h-60 sm:h-80 rounded-2xl'>
+            <img src="/assets/images/2a24c60e5479cec788203caf906828d8.png"
+                alt="Casual Inspiration Outfit"
+                className='rounded-2xl w-full absolute top-0 left-0 object-top h-full object-cover' />
+        </div>
     </section>
   )
 }
