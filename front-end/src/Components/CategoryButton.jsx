@@ -12,5 +12,5 @@ export default function CategoryButton({category, selectedCategoryID, onClick}) 
       })}>
         {category.name}
      </button>
-  )
+  );
 }
