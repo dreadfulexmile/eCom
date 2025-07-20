@@ -1,7 +1,7 @@
 import React from 'react'
-import {cn} from '@/lib/utils'
+import { cn } from '@/lib/utils'
 
-export default function CategoryButton({category, selectedCategoryID, onClick}) {
+function CategoryButton({category, selectedCategoryID, onClick}) {
   return (
     <button
       onClick={onClick}
@@ -14,3 +14,5 @@ export default function CategoryButton({category, selectedCategoryID, onClick}) 
      </button>
   );
 }
+
+export default CategoryButton;
