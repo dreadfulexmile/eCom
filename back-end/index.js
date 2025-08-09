@@ -27,6 +27,18 @@ app.post("/api/products", (req, res) => {
     };
     products.push(product);
     res.status(201).send();
+});
+
+app.post("api/categories", (req,res) => {
+    const {name,slug,__v} = req.body;
+    const category = {
+        _id: categories.length +1,
+        name,
+        slug,
+        __v
+    };
+    categories.push(category);
+    res.status(201).send();
 })
 
 
