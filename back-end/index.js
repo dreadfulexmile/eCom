@@ -10,7 +10,6 @@ app.get("/api/products", (req, res) => {
     res.json(products);
 });
 
-
 app.get("/api/categories", (req, res) => {
     res.json(categories);
 });
@@ -39,8 +38,7 @@ app.post("api/categories", (req,res) => {
     };
     categories.push(category);
     res.status(201).send();
-})
-
+});
 
 app.get("/api/product/:id", (req, res) => {
     console.log(req.params);
@@ -60,7 +58,6 @@ app.get("/api/category/:id", (req, res) => {
     }
     res.json(category);
 });
-
 
 app.listen(PORT, ()=>{
     console.log(`Servert Running at http://localhost:${PORT}`);
