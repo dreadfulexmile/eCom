@@ -49,7 +49,6 @@ app.get("/api/product/:id", (req, res) => {
     res.json(product);
 });
 
-
 app.get("/api/category/:id", (req, res) => {
     console.log(req.params);
     const category = categories.find((c) => c._id === req.params.id);
