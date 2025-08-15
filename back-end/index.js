@@ -14,7 +14,6 @@ app.get("/api/categories", (req, res) => {
     res.json(categories);
 });
 
-
 app.post("/api/products", (req, res) => {
     const {name, price, description, categoryId} = req.body;
     const product = {
