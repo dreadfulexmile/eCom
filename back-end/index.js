@@ -57,9 +57,6 @@ app.get("/api/category/:id", (req, res) => {
     res.json(category);
 });
 
-
-
-
 app.listen(PORT, ()=>{
     console.log(`Servert Running at http://localhost:${PORT}`);
 });
