@@ -1,5 +1,5 @@
 import express from "express";
-import {products, categories} from "./data.js";
+import { products, categories } from "./data.js";
 
 const app = express();
 app.use(express.json());
