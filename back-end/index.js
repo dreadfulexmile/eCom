@@ -10,7 +10,6 @@ const PORT = 8000 ||
 //APIs
 app.get("/api/products", (req, res) => {
     res.json(products);  
-    res.send("products");
 });
 
 app.get("/api/categories", (req, res) => {
