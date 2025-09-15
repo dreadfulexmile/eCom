@@ -16,8 +16,6 @@ app.get("/api/categories", (req, res) => {
     res.json(categories);
 });
 
-
-
 //Connection
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
