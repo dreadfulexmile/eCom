@@ -6,7 +6,6 @@ app.use(express.json());
 
 const PORT = 8000 ||
 
-
 //APIs
 app.get("/api/products", (req, res) => {
     res.json(products);  
