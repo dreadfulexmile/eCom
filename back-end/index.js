@@ -11,6 +11,7 @@ app.get("/api/products", (req, res) => {
     res.json(products);  
 });
 
+
 app.get("/api/categories", (req, res) => {
     res.json(categories);
 });
