@@ -63,3 +63,4 @@ app.post("/api/categories", (req,res) =>{
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
 });
+
