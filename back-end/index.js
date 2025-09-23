@@ -55,7 +55,7 @@ app.post("/api/categories", (req,res) =>{
         __v,
     };
     categories.push(category);
-    res.status(201).json({message: "Category is added."})
+    res.status(201).send({message: "Category is added."})
 })
 
 
