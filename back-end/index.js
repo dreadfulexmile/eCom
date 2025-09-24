@@ -58,9 +58,7 @@ app.post("/api/categories", (req,res) =>{
     res.status(201).send({message: "Category is added."})
 })
 
-
 //Connection
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
 });
-
