@@ -33,6 +33,7 @@ app.get("/api/categories/:id", (req,res) => {
     res.json(category);
 })
 
+
 app.post("/api/products", (req,res) =>{
     const {name, price, description, categoryId} = req.body;
     const product = {
@@ -45,6 +46,7 @@ app.post("/api/products", (req,res) =>{
     products.push(product);
     res.status(201).json({message: "Product is added."});
 })
+
 
 app.post("/api/categories", (req,res) =>{
     const {name, slug, __v} = req.body;
