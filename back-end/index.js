@@ -6,6 +6,8 @@ app.use(express.json());
 
 const PORT = 8000 ||
 
+
+
 //APIs
 app.get("/api/products", (req, res) => {
     res.json(products);  
@@ -33,7 +35,6 @@ app.get("/api/categories/:id", (req,res) => {
     res.json(category);
 })
 
-
 app.post("/api/products", (req,res) =>{
     const {name, price, description, categoryId} = req.body;
     const product = {
@@ -47,7 +48,6 @@ app.post("/api/products", (req,res) =>{
     res.status(201).json({message: "Product is added."});
 })
 
-
 app.post("/api/categories", (req,res) =>{
     const {name, slug, __v} = req.body;
     const category = {
@@ -59,6 +59,8 @@ app.post("/api/categories", (req,res) =>{
     categories.push(category);
     res.status(201).send({message: "Category is added."})
 })
+
+
 
 //Connection
 app.listen(PORT, () => {
