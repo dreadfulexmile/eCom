@@ -1,14 +1,10 @@
 import express from "express";
 import { products, categories } from "./data.js";
 
-
-
 const app = express();
 app.use(express.json());
 
 const PORT = 8000 ||
-
-
 
 //APIs
 app.get("/api/products", (req, res) => {
@@ -61,8 +57,6 @@ app.post("/api/categories", (req,res) =>{
     categories.push(category);
     res.status(201).send({message: "Category is added."})
 })
-
-
 
 //Connection
 app.listen(PORT, () => {
