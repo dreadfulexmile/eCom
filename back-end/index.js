@@ -46,10 +46,6 @@ app.post("/api/products", (req,res) =>{
     res.status(201).json({message: "Product is added."});
 })
 
-app.delete("/api/products/:id", (req,res) =>{
-    
-})
-
 app.post("/api/categories", (req,res) =>{
     const {name, slug, __v} = req.body;
     const category = {
@@ -60,6 +56,15 @@ app.post("/api/categories", (req,res) =>{
     };
     categories.push(category);
     res.status(201).send({message: "Category is added."})
+})
+
+app.delete("/api/products/:id", (req,res) =>{
+    console.log(req.params);
+    const product = products.find((p) => p._id === req.params.id);
+    if(!product) {
+        return res.status(404).json({message: "Product Not Found."})
+    }
+    res.json({message: "Product Deleted."}); 
 })
 
 
