@@ -22,7 +22,7 @@ app.get("/api/products/:id", (req,res) => {
         return res.status(404).json({message: "Product Not Found."})
     }
     res.json(product);
-})
+});
 
 app.get("/api/categories/:id", (req,res) => {
     console.log(req.params);
@@ -31,7 +31,7 @@ app.get("/api/categories/:id", (req,res) => {
         return res.status(404).json({message: "Category Not Found."})
     }
     res.json(category);
-})
+});
 
 app.post("/api/products", (req,res) =>{
     const {name, price, description, categoryId} = req.body;
@@ -44,7 +44,7 @@ app.post("/api/products", (req,res) =>{
     };
     products.push(product);
     res.status(201).json({message: "Product is added."});
-})
+});
 
 app.post("/api/categories", (req,res) =>{
     const {name, slug, __v} = req.body;
@@ -56,7 +56,7 @@ app.post("/api/categories", (req,res) =>{
     };
     categories.push(category);
     res.status(201).send({message: "Category is added."})
-})
+});
 
 app.delete("/api/products/:id", (req,res) =>{
     console.log(req.params);
@@ -65,7 +65,7 @@ app.delete("/api/products/:id", (req,res) =>{
         return res.status(404).json({message: "Product Not Found."})
     }
     res.json({message: "Product Deleted."}); 
-})
+});
 
 app.delete("/api/categories/:id", (req,res) =>{
     console.log(req.params);
@@ -74,7 +74,7 @@ app.delete("/api/categories/:id", (req,res) =>{
         return res.status(404).json({message: "Category Not Found."})
     }
     res.json({message: "Category Deleted."}); 
-})
+});
 
 
 //Connection
