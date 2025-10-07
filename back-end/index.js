@@ -3,8 +3,8 @@ import { products, categories } from "./data.js";
 
 const app = express();
 app.use(express.json());
-const PORT = 8000 ||
 
+const PORT = 8000 ||
 
 //APIs
 app.get("/api/products", (req, res) => {
@@ -75,7 +75,6 @@ app.delete("/api/categories/:id", (req,res) =>{
     }
     res.json({message: "Category Deleted."}); 
 });
-
 
 //Connection
 app.listen(PORT, () => {
