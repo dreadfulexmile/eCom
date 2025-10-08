@@ -6,7 +6,6 @@ app.use(express.json());
 
 const PORT = 8000 ||
 
-//APIs
 app.get("/api/products", (req, res) => {
     res.json(products);  
 });
@@ -76,7 +75,8 @@ app.delete("/api/categories/:id", (req,res) =>{
     res.json({message: "Category Deleted."}); 
 });
 
-//Connection
+
+
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
 });
