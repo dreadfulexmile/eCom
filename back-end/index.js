@@ -76,7 +76,7 @@ app.delete("/api/categories/:id", (req,res) =>{
 });
 
 
-
+// #Connection
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
 });
