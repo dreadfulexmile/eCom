@@ -14,4 +14,5 @@ function CategoryButton({ category, selectedCategoryId, onClick }) {
     </button>
   );
 }
+
 export default CategoryButton;
