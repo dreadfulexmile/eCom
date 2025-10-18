@@ -12,7 +12,6 @@ export default function Navigation() {
       <div>
         <div className='flex items-center justify-between h-16'>
             <a href="/" className='font-bold text-2xl'>Mebius</a>
-
             <nav className='hidden md:flex space-x-8'>
                 {[
                     {
@@ -46,7 +45,6 @@ export default function Navigation() {
                     );
                 })}
             </nav>
-
             <div className='flex items-center space-x-4'>
                 <button aria-label='Search' className='p-1'>
                     <Search size={20}/>
