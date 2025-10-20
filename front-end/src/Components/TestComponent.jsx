@@ -9,7 +9,6 @@ export default function TestComponent() {
   const handleClick = () => {
     setNumbers([...numbers, 6]);
   };
-
   return (
     <div className="px-4 lg:px-16 py-8 border border-black">
         {numbers.map((number)=>{

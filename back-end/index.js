@@ -66,14 +66,15 @@ app.delete("/api/products/:id", (req,res) =>{
     res.json({message: "Product Deleted."}); 
 });
 
-app.delete("/api/categories/:id", (req,res) =>{
-    console.log(req.params);
-    const category = categories.find((c) => c._id === req.params.id);
-    if(!category) {
-        return res.status(404).json({message: "Category Not Found."})
+app.delete("/api/categories/:id", (req, res) => {
+    const categoryIndex = categories.findIndex((c) => c._id === req.params.id);
+    if (categoryIndex === -1) {
+        return res.status(404).json({ message: "Category Not Found." });
     }
-    res.json({message: "Category Deleted."}); 
+    categories.splice(categoryIndex, 1);
+    res.json({ message: "Category Deleted." });
 });
+
 
 
 //Connection
