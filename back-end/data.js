@@ -1,3 +1,4 @@
+// Products Data
 const products = [
   {
     _id: "67def6e42b2c146578729f60",
@@ -235,6 +236,7 @@ const products = [
   },
 ];
 
+// Categories Data
 const categories = [
   {
     _id: "ALL",
