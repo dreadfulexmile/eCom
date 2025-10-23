@@ -18,7 +18,7 @@ app.get("/api/products/:id", (req,res) => {
     console.log(req.params);
     const product = products.find((p) => p._id === req.params.id);
     if(!product) {
-        return res.status(404).json({message: "Product Not Found."})
+        return res.status(404).json({message: "Product Not Found!"})
     }
     res.json(product);
 });
@@ -27,7 +27,7 @@ app.get("/api/categories/:id", (req,res) => {
     console.log(req.params);
     const category = categories.find((c) => c._id === req.params.id);
     if (!category){
-        return res.status(404).json({message: "Category Not Found."})
+        return res.status(404).json({message: "Category Not Found!"})
     }
     res.json(category);
 });
@@ -42,7 +42,7 @@ app.post("/api/products", (req,res) =>{
         categoryId,
     };
     products.push(product);
-    res.status(201).json({message: "Product is added."});
+    res.status(201).json({message: "Product is added!"});
 });
 
 app.post("/api/categories", (req,res) =>{
@@ -54,26 +54,27 @@ app.post("/api/categories", (req,res) =>{
         __v,
     };
     categories.push(category);
-    res.status(201).send({message: "Category is added."})
+    res.status(201).send({message: "Category is added!"})
 });
 
 app.delete("/api/products/:id", (req,res) =>{
     console.log(req.params);
     const product = products.find((p) => p._id === req.params.id);
     if(!product) {
-        return res.status(404).json({message: "Product Not Found."})
+        return res.status(404).json({message: "Product Not Found!"})
     }
-    res.json({message: "Product Deleted."}); 
+    res.json({message: "Product Deleted!"}); 
 });
 
 app.delete("/api/categories/:id", (req, res) => {
     const categoryIndex = categories.findIndex((c) => c._id === req.params.id);
     if (categoryIndex === -1) {
-        return res.status(404).json({ message: "Category Not Found." });
+        return res.status(404).json({ message: "Category Not Found!" });
     }
     categories.splice(categoryIndex, 1);
-    res.json({ message: "Category Deleted." });
+    res.json({ message: "Category Deleted!" });
 });
+
 
 //Connection
 app.listen(PORT, () => {
