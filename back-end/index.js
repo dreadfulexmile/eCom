@@ -75,7 +75,6 @@ app.delete("/api/categories/:id", (req, res) => {
     res.json({ message: "Category Deleted!" });
 });
 
-
 //Connection
 app.listen(PORT, () => {
     console.log(`Server running at ${PORT}`);
