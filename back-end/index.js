@@ -6,6 +6,7 @@ app.use(express.json());
 
 const PORT = 8000 ||
 
+// getRequests
 app.get("/api/products", (req, res) => {
     res.json(products);  
 });
@@ -32,6 +33,7 @@ app.get("/api/categories/:id", (req,res) => {
     res.json(category);
 });
 
+// insertRequests
 app.post("/api/products", (req,res) =>{
     const {name, price, description, categoryId} = req.body;
     const product = {
@@ -57,6 +59,7 @@ app.post("/api/categories", (req,res) =>{
     res.status(201).send({message: "Category is added!"})
 });
 
+// deleteRequests
 app.delete("/api/products/:id", (req,res) =>{
     console.log(req.params);
     const product = products.find((p) => p._id === req.params.id);
