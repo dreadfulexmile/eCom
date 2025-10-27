@@ -13,14 +13,12 @@ export default function CasualInspiration() {
                 BROWSE INSPIRATION
             </button>
         </div>
-
         <div className='relative col-span-1 md:col-span-3 h-60 sm:h-80 rounded-2xl'>
             <img 
              src="/assets/images/ca0df25c3d226a223269e70541e09760.png"
              alt="Casual Inspiration Outfit"
              className='rounded-2xl absolute top-0 left-0 w-full h-full object-cover'/>
-        </div>
-        
+        </div>       
         <div className='relative col-span-1 md:col-span-3 h-60 sm:h-80 rounded-2xl'>
             <img src="/assets/images/2a24c60e5479cec788203caf906828d8.png"
                 alt="Casual Inspiration Outfit"
