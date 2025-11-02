@@ -1,4 +1,4 @@
-/*console.log("Hello JS")
+console.log("Hello JS")
 
 const a = 1;
 const b = 5;
@@ -30,32 +30,32 @@ const add = (a,b) => {
 
 const sum = add(2,2)
 console.log(sum);
-*/
 
 
-// const num = [1,2,3,4,5]
-// console.log(num.length);
 
-// let num = [1,2,3,4,5];
+const num1 = [1,2,3,4,5]
+console.log(num1.length);
 
-// for (let i = 0; i < num.length; i++) {
-//     console.log(num[i]);
-// }
+let num2 = [1,2,3,4,5];
 
-// let i = 0;
-// while (i < num.length) {
-//     console.log(num[i]);
-//     i++;
+for (let i = 0; i < num2.length; i++) {
+    console.log(num2[i]);
+}
+
+let i = 0;
+while (i < num3.length) {
+    console.log(num3[i]);
+    i++;
     
-// }
+}
 
 
-// const num = [1,2,3,4,5];
-// const theFunction = (num) => {
-//     const result = num*2;
-//     console.log(result);
-// }
-// num.forEach(theFunction);
+const num = [1,2,3,4,5];
+const theFunction = (num) => {
+    const result = num*2;
+    console.log(result);
+}
+num.forEach(theFunction);
 
 
 const nums = [1,2,3,4,5];
