@@ -42,8 +42,8 @@ for (let i = 0; i < num2.length; i++) {
     console.log(num2[i]);
 }
 
-let i = 0;
-while (i < num3.length) {
+let ig = 0;
+while (ig < num3.length) {
     console.log(num3[i]);
     i++;
     
