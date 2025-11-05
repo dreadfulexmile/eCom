@@ -15,6 +15,7 @@ app.get("/api/categories", (req, res) => {
     res.json(categories);
 });
 
+// getbyid
 app.get("/api/products/:id", (req,res) => {
     console.log(req.params);
     const product = products.find((p) => p._id === req.params.id);
