@@ -60,6 +60,29 @@ app.post("/api/categories", (req,res) =>{
     res.status(201).send({message: "Category is added!"})
 });
 
+app.put("/api/products/:id", (req, res) => {
+    const id = req.params.id;
+    const index = products.findIndex((p) => String(p._id) === String(id));
+    if (index === -1) {
+        return res.status(404).json({ message: "Product Not Found!" });
+    }
+
+    const { name, price, description, categoryId } = req.body;
+    const existing = products[index];
+
+    const updatedProduct = {
+        ...existing,
+        name: name !== undefined ? name : existing.name,
+        price: price !== undefined ? price : existing.price,
+        description: description !== undefined ? description : existing.description,
+        categoryId: categoryId !== undefined ? categoryId : existing.categoryId,
+    };
+
+    products[index] = updatedProduct;
+    res.json(updatedProduct);
+});
+  
+
 // deleteRequests
 app.delete("/api/products/:id", (req,res) =>{
     console.log(req.params);
