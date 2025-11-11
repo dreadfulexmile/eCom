@@ -60,6 +60,7 @@ app.post("/api/categories", (req,res) =>{
     res.status(201).send({message: "Category is added!"})
 });
 
+//updateRequests
 app.put("/api/products/:id", (req, res) => {
     const id = req.params.id;
     const index = products.findIndex((p) => String(p._id) === String(id));
