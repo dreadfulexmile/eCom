@@ -1,1 +1,0 @@
-import product from "./products.model.js";
