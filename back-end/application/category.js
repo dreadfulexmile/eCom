@@ -1,4 +1,4 @@
-import { Category } from "@mui/icons-material";
+import { categories } from "../data.js";
 
 const getAllCategories = (req,res) =>{
     res.json(Categories);

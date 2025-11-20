@@ -1,9 +1,10 @@
 import express from "express";
-import { getAllPgetAllProducts,
+
+import { getAllProducts,
     createProduct,
     getProductById,
     updateProductById,
-    deleteProductById } from "../application/product";
+    deleteProductById } from "../application/product.js";
 
 const productRouter = express.Router();
 
