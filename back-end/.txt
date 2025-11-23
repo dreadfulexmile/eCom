@@ -1,0 +1,1 @@
+mongodb+srv://admin:<db_password>@cluster0.1xols.mongodb.net/?appName=Cluster0
