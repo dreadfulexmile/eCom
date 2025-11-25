@@ -4,7 +4,7 @@ import express from "express";
 import productRouter from "./api/product.api.js";
 import categoryRouter from "./api/category.api.js";
 import bodyParser from "body-parser";
-import connectToDatabase from "./infrastructure/db/database.js";
+import connectToDatabase from "./infrastructure/db/db/database.js";
 
 const app = express();
 
