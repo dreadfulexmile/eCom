@@ -1,4 +1,5 @@
 import express from "express";
+import Product from "../infrastructure/db/entities/product.js";
 
 import { getAllProducts,
     createProduct,

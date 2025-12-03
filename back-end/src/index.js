@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
-import productRouter from "./api/product.api.js";
-import categoryRouter from "./api/category.api.js";
+import productRouter from "./api/product.js";
+import categoryRouter from "./api/category.js";
 import bodyParser from "body-parser";
 import connectToDatabase from "./infrastructure/db/db/database.js";
 

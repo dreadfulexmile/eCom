@@ -1,13 +1,14 @@
 import { products } from '../data.js';
+import product from '../infrastructure/db/models/product.model.js';
 
 const getAllProducts = (req,res) =>{
+    const products = await Product.find();
     res.json(products);
 };
 
 const createProduct = (req, res) =>{
-    const newID = (products.length + 1).toString();
-    const newProduct = { id: newID, ...req.body, __v: 0 };
-    products.push(newProduct);
+    const newProduct = req.body;
+    await product.create(newProduct);
     res.status(201).json(newProduct);
 };
 
