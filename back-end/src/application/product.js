@@ -1,53 +1,52 @@
-import { products } from '../data.js';
-import product from '../infrastructure/db/models/product.model.js';
+import Product from "../infrastructure/db/entities/product.js";
 
-const getAllProducts = (req,res) =>{
+const getAllProducts = async (req, res) => {
+  const categoryId = req.query.categoryId;
+  if (categoryId) {
+    const products = await Product.find({ categoryId });
+    res.json(products);
+  } else {
     const products = await Product.find();
     res.json(products);
+  }
 };
 
-const createProduct = (req, res) =>{
-    const newProduct = req.body;
-    await product.create(newProduct);
-    res.status(201).json(newProduct);
+const createProduct = async (req, res) => {
+  const newProduct = req.body;
+  await Product.create(newProduct);
+  res.status(201).json(newProduct);
 };
 
-const getProductById = (req, res) =>{
-    const { id } = req.params;
-    const product = products.find(p => p.id === id);
-    if (!product) {
-        return res.status(404).json({ message: 'Product not found' });
-    }
-    res.json(product);
+const getProductById = async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  if (!product) {
+    return res.status(404).json({ message: "Product not found" });
+  }
+  res.json(product);
 };
 
-const updateProductById = (req, res) =>{
-    const { id } = req.params;
-    const productIndex = products.findIndex(p => p.id === id);
-    if (productIndex === -1) {
-        return res.status(404).json({ message: 'Product not found' });
-    }
-
-    products[productIndex] = { ...products[productIndex], ...req.body };
-    res.json(products[productIndex]);
+const updateProductById = async (req, res) => {
+  const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+  if (!product) {
+    return res.status(404).json({ message: "Product not found" });
+  }
+  res.status(200).json(product);
 };
 
-const deleteProductById = (req, res) =>{
-    const { id } = req.params;
-    const productIndex = products.findIndex(p => p.id === id);
-    if (productIndex === -1) {
-        return res.status(404).json({ message: 'Product not found' });
-    }
-
-    const deletedProduct = products[index];
-    products.splice(index, 1);
-    res.status(200).send();
+const deleteProductById = async (req, res) => {
+  const product = await Product.findByIdAndDelete(req.params.id);
+  if (!product) {
+    return res.status(404).json({ message: "Product not found" });
+  }
+  res.status(200).json({ message: "Product deleted successfully" });
 };
 
 export {
-    getAllProducts,
-    createProduct,
-    getProductById,
-    updateProductById,
-    deleteProductById
+  createProduct,
+  deleteProductById,
+  getAllProducts,
+  getProductById,
+  updateProductById,
 };
