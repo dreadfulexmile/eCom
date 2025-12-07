@@ -234,7 +234,6 @@ const products = [
     __v: 0,
   },
 ];
-
 const categories = [
   {
     _id: "ALL",
@@ -273,5 +272,4 @@ const categories = [
     __v: 0,
   },
 ];
-
 export { products, categories };
