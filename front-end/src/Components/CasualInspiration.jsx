@@ -13,6 +13,7 @@ export default function CasualInspiration() {
                 BROWSE INSPIRATION
             </button>
         </div>
+        
         <div className='relative col-span-1 md:col-span-3 h-60 sm:h-80 rounded-2xl'>
             <img 
              src="/assets/images/ca0df25c3d226a223269e70541e09760.png"
