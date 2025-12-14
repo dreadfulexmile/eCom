@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Search, X, Menu, ShoppingBag } from 'lucide-react';
 
-
 export default function Navigation() {
 
   const[isMenuOpen,setIsMenuOpen]=useState(false);
