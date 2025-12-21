@@ -13,5 +13,4 @@ const globalErrorHandlingMiddleware = (err, req, res, next) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
-
 export default globalErrorHandlingMiddleware;
